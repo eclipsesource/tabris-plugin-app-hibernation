@@ -1,0 +1,20 @@
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven {
+            // provides tabris android platform from directory repository
+            url System.getenv("TABRIS_ANDROID_PLATFORM") + "/bin/templates/project/m2repository"
+        }
+    }
+}
+rootProject.name = "android"
+include ':app'

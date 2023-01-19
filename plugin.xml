@@ -1,7 +1,27 @@
 <?xml version='1.0' encoding='utf-8'?>
 <plugin id="tabris-plugin-app-hibernation" version="1.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+
     <name>App hibernation plugin for Tabris.js.</name>
+
     <js-module name="AppHibernation" src="www/AppHibernation.js">
         <clobbers target="plugin.AppHibernation" />
     </js-module>
+
+    <platform name="android">
+
+      <config-file target="AndroidManifest.xml" parent="/manifest/application">
+        <meta-data
+            android:name="com.eclipsesource.tabris.android.HANDLER.com.tabris.js.app.hibernation"
+            android:value="com.tabris.js.app.hibernation.AppHibernationHandler" />
+      </config-file>
+ 
+      <source-file src="src/android/com/tabris/js/app/hibernation/AppHibernation.kt"
+                   target-dir="src/android/com/tabris/js/app/hibernation" />
+      <source-file src="src/android/com/tabris/js/app/hibernation/AppHibernationHandler.kt"
+                   target-dir="src/android/com/tabris/js/app/hibernation" />
+      <source-file src="src/android/com/tabris/js/app/hibernation/EnabledProperty.kt"
+                   target-dir="src/android/com/tabris/js/app/hibernation" />
+
+    </platform>
+
 </plugin>
