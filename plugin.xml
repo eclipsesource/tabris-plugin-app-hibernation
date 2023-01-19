@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="tabris-plugin-app-hibernation" version="1.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>App hibernation plugin for Tabris.js.</name>
+    <js-module name="AppHibernation" src="www/AppHibernation.js">
+        <clobbers target="plugin.AppHibernation" />
+    </js-module>
+</plugin>

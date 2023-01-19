@@ -1,0 +1,25 @@
+{
+    "name": "tabris-plugin-app-hibernation",
+    "version": "1.0.0",
+    "description": "App hibernation plugin for Tabris.js.",
+    "cordova": {
+        "id": "tabris-plugin-app-hibernation",
+        "platforms": [
+            "android"
+        ]
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/eclipsesource/tabris-plugin-app-hibernation"
+    },
+    "keywords": [
+        "ecosystem:cordova",
+        "cordova-android",
+        "tabris",
+        "tabris.js",
+        "app",
+        "hibernation"
+    ],
+    "author": "Elshad Seyidmammadov",
+    "license": "Revised BSD License (3-clause license)"
+}
