@@ -5,14 +5,19 @@ class AppHibernation extends tabris.Widget {
         return 'plugin.AppHibernation';
     }
 
+    getUnusedAppRestrictionsStatus() {
+        return new Promise((resolve, reject) => {
+            this._nativeCall('getUnusedAppRestrictionsStatus', {
+                onSuccess: status => resolve(status),
+                onError: message => reject(new Error(message))
+            });
+        });
+    }
+
     openAppSettings() {
         return this._nativeCall('openAppSettings');
     }
 
 }
-
-tabris.NativeObject.defineProperties(AppHibernation.prototype, {
-    enabled: { readonly: true, const: true },
-});
 
 module.exports = AppHibernation;

@@ -14,12 +14,12 @@
             android:name="com.eclipsesource.tabris.android.HANDLER.com.tabris.js.app.hibernation"
             android:value="com.tabris.js.app.hibernation.AppHibernationHandler" />
       </config-file>
- 
+
+      <framework src="com.google.guava:guava:31.0.1-android" />
+
       <source-file src="src/android/com/tabris/js/app/hibernation/AppHibernation.kt"
                    target-dir="src/android/com/tabris/js/app/hibernation" />
       <source-file src="src/android/com/tabris/js/app/hibernation/AppHibernationHandler.kt"
-                   target-dir="src/android/com/tabris/js/app/hibernation" />
-      <source-file src="src/android/com/tabris/js/app/hibernation/EnabledProperty.kt"
                    target-dir="src/android/com/tabris/js/app/hibernation" />
 
     </platform>
