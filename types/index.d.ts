@@ -5,7 +5,7 @@ declare global {
 
         export class AppHibernation {
 
-            constructor(properties: Partial<AppHibernation>);
+            constructor();
 
             public getUnusedAppRestrictionsStatus(): Promise<'feature-not-available' | 'disabled' | 'enabled' | 'unknown'>;
 
@@ -16,3 +16,5 @@ declare global {
     }
 
 }
+
+export {};
